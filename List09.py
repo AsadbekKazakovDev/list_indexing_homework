@@ -6,4 +6,19 @@ def main(list1):
     Returns:
         bool: return answer
     """
-    return
+    if len(list1) == 0:
+        return True
+    
+    first_item = list1[0]
+    index = 1
+    
+    while index < len(list1):
+        if list1[index] != first_item:
+            return False
+        index += 1
+    
+    return True
+list1=[1, 1, 1, 1, 7]
+print(main(list1))
+list1=[1, 1, 1, 1, 1]
+print(main(list1))
