@@ -6,4 +6,17 @@ def main(list_num):
     Returns:
         int: return answer
     """
-    return
+    if len(list_num) == 0:
+        return None
+
+    largest = list_num[0]
+    index = 1
+
+    while index < len(list_num):
+        if list_num[index] > largest:
+            largest = list_num[index]
+        index += 1
+
+    return largest
+list_num=[4, 32, 1, 4, 3]
+print(main(list_num))
